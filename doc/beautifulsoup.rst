@@ -149,14 +149,14 @@ Here's a complete example showing how to use html5lib with BeautifulSoup:
     
     # Navigate the parse tree
     title = soup.find('title')
-    print(f'Page title: {title.get_text()}')
+    print('Page title: {}'.format(title.get_text()))
     
     # Find all links
     links = soup.find_all('a')
     for link in links:
         href = link.get('href')
         text = link.get_text()
-        print(f'{text}: {href}')
+        print('{}: {}'.format(text, href))
 
 See Also
 --------

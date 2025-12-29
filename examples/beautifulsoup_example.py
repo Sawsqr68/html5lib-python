@@ -63,9 +63,9 @@ def main():
     soup_html5lib = BeautifulSoup(malformed, 'html5lib')
     soup_htmlparser = BeautifulSoup(malformed, 'html.parser')
     
-    print(f"Malformed HTML: {malformed}")
-    print(f"html5lib found {len(soup_html5lib.find_all('p'))} paragraphs")
-    print(f"html.parser found {len(soup_htmlparser.find_all('p'))} paragraphs")
+    print("Malformed HTML: {}".format(malformed))
+    print("html5lib found {} paragraphs".format(len(soup_html5lib.find_all('p'))))
+    print("html.parser found {} paragraphs".format(len(soup_htmlparser.find_all('p'))))
     
     print("\n" + "=" * 60)
     print("CONCLUSION:")
