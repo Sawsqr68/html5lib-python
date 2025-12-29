@@ -8,6 +8,7 @@ Overview
    :maxdepth: 2
 
    movingparts
+   beautifulsoup
    modules
    changes
    License <license>

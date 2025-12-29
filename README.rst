@@ -110,10 +110,14 @@ functionality:
   walking) under CPython (but *not* PyPy where it is known to cause
   segfaults);
 
-- ``genshi`` has a treewalker (but not builder); and
+- ``genshi`` has a treewalker (but not builder);
 
 - ``chardet`` can be used as a fallback when character encoding cannot
-  be determined.
+  be determined; and
+
+- ``beautifulsoup4`` can use html5lib as a parser backend for
+  HTML5-compliant parsing. Simply pass ``'html5lib'`` as the parser
+  name when creating a BeautifulSoup object.
 
 
 Bugs
