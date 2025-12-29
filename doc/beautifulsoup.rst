@@ -139,13 +139,21 @@ Here's a complete example showing how to use html5lib with BeautifulSoup:
 .. code-block:: python
 
     from bs4 import BeautifulSoup
-    import requests
     
-    # Fetch a web page
-    response = requests.get('https://example.com')
+    # Read HTML from a file or string
+    html_content = '''
+    <html>
+        <head><title>Example Page</title></head>
+        <body>
+            <h1>Welcome</h1>
+            <p>This is a <a href="/page1">link</a></p>
+            <p>Another <a href="/page2">link</a></p>
+        </body>
+    </html>
+    '''
     
     # Parse with html5lib for HTML5-compliant parsing
-    soup = BeautifulSoup(response.content, 'html5lib')
+    soup = BeautifulSoup(html_content, 'html5lib')
     
     # Navigate the parse tree
     title = soup.find('title')

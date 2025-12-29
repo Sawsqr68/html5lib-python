@@ -3,16 +3,18 @@
 Example demonstrating html5lib integration with BeautifulSoup.
 
 This example shows how to use html5lib as a parser backend for BeautifulSoup,
-providing HTML5-compliant parsing.
-
-The problem statement "BeautifulSoup(markup, 'html.parser')" refers to
-BeautifulSoup's internal usage of 'html.parser' in its html5lib integration.
-This example demonstrates that html5lib works correctly with BeautifulSoup
-regardless of this internal implementation detail.
+providing HTML5-compliant parsing with robust error handling for malformed HTML.
 """
 
 from __future__ import print_function
-from bs4 import BeautifulSoup
+
+try:
+    from bs4 import BeautifulSoup
+except ImportError:
+    print("Error: BeautifulSoup4 is required to run this example.")
+    print("Install it with: pip install beautifulsoup4 html5lib")
+    exit(1)
+
 import html5lib
 
 
