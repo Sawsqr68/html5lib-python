@@ -16,13 +16,13 @@ lxml==3.8.0 ; python_version < '3.7'
 # - 3.8 is actually 4.3.5
 # - 3.9-3.10 is actually 4.5.2
 # - 3.11 is actually 4.9.0
-lxml==4.9.0 ; python_version >= '3.7'
+lxml==6.1.0 ; python_version >= '3.7'
 
 # requirements-test.txt
 flake8==3.9.2 ; python_version < '3.6'
 flake8==5.0.4; python_version >= '3.6'
 pytest==4.6.10 ; python_version < '3'
-pytest==5.4.2 ; python_version >= '3'
+pytest==9.0.3 ; python_version >= '3'
 coverage==5.1
 pytest-expect==1.1.0
 mock==3.0.5 ; python_version < '3.6'
